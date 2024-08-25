@@ -1,7 +1,7 @@
 /*
     @file   LinkerScript.ld
     @author Youssef Hossam Saad
-    @brief  Linker script for STM32F407VGTx Device from STM32F4 series
+    @brief  Linker script for STM32F407VGTx Device from STM32F4 series (gcc compiler)
             linkedin: https://www.linkedin.com/in/youssef-hossam-b342661b9/
 */
 
