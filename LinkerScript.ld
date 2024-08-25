@@ -48,7 +48,7 @@ SECTIONS{
     *(.data)           /* .data sections */
     *(.data*)          /* .data* sections */
     . = ALIGN(4);
-    _edata = .;        /* Define a global symbol at data end, will be used later on in startup code to copy init vars to Ram*/
+    _edata = .;        /* Define a global symbol at data end*/
   } >RAM AT> FLASH
 
   /* .bss section, Uninitialized data section into "RAM" Ram type memory */
