@@ -21,6 +21,14 @@ MEMORY
 
 /* Sections */
 SECTIONS{
+  /* The startup code into "FLASH" Rom type memory */
+  .isr_vector :
+  {
+    . = ALIGN(4);
+    *(.isr_vector)
+    . = ALIGN(4);
+  } >FLASH
+
   /* .text section, The program code and other data into "FLASH" Rom type memory */
   .text :
   {
@@ -40,6 +48,9 @@ SECTIONS{
     . = ALIGN(4);
   } >FLASH
 
+  /* Used by the startup to initialize data */
+  _sidata = LOADADDR(.data);
+
   /* .data section, Initialized data sections into "RAM" Ram type memory */
   .data :
   {
@@ -48,10 +59,11 @@ SECTIONS{
     *(.data)           /* .data sections */
     *(.data*)          /* .data* sections */
     . = ALIGN(4);
-    _edata = .;        /* Define a global symbol at data end*/
+    _edata = .;        /* Define a global symbol at data end */
   } >RAM AT> FLASH
 
   /* .bss section, Uninitialized data section into "RAM" Ram type memory */
+   . = ALIGN(4);
   .bss :
   {
     _sbss = .;         /* Define a global symbol at bss start */
