@@ -10,8 +10,8 @@
 #define CORTEXM4_CORE_NVIC_H_
 
 /*------------- Includes Start ------------------ */
+#include <stdint.h>
 
-#include "Std_Types.h"
 
 /*------------- Includes End ------------------ */
 
@@ -20,6 +20,9 @@
 
 #define NVIC_BASE 		(0xE000E100UL)
 #define NVIC			((NVIC_Type*)NVIC_BASE)
+
+#define NVIC_PRI_BITS	(4U)
+
 /*------------- Macro Declarations End ------------------ */
 
 /*------------- Macro Functions Start ------------------ */
@@ -98,60 +101,60 @@ TIM1_BRK_TIM9_IRQN= 24, 			/*!< TIM1 Break interrupt and TIM9 global interrupt *
 TIM1_UP_TIM10_IRQN= 25, 			/*!< TIM1 Update Interrupt and TIM10 global interrupt */
 TIM1_TRG_COM_TIM11_IRQN= 26,		/*!< TIM1 Trigger and Commutation Interrupt and TIM11 global interrupt */
 TIM1_CC_IRQN = 27,					/*!< TIM1 Capture Compare Interrupt */
-TIM2 						= 28,
-TIM3 						= 29,
-TIM4						= 30,
-I2C1_EV 					= 31,
-I2C1_ER 					= 32,
-I2C2_EV 					= 33,
-I2C2_ER 					= 34,
-SPI1 						= 35,
-SPI2 						= 36,
-USART1						= 37,
-USART2 						= 38,
-USART3 						= 39,
-EXTI15_10 					= 40,
-RTC_Alarm 					= 41,
-OTG_FS_WKUP 				= 42,
-TIM8_BRK_TIM12 				= 43,
-TIM8_UP_TIM13 				= 44,
-TIM8_TRG_COM_TIM14 			= 45,
-TIM8_CC 					= 46,
-DMA1_Stream7 				= 47,
-FSMC 						= 48,
-SDIO 						= 49,
-TIM5 						= 50,
-SPI3 						= 51,
-UART4 						= 52,
-UART5						= 53,
-TIM6_DAC 					= 54,
-TIM7 						= 55,
-DMA2_Stream0 				= 56,
-DMA2_Stream1 				= 57,
-DMA2_Stream2 				= 58,
-DMA2_Stream3 				= 59,
-DMA2_Stream4 				= 60,
-ETH 						= 61,
-ETH_WKUP 					= 62,
-CAN2_TX 					= 63,
-CAN2_RX0 					= 64,
-CAN2_RX1 					= 65,
-CAN2_SCE 					= 66,
-OTG_FS 						= 67,
-DMA2_Stream5 				= 68,
-DMA2_Stream6 				= 69,
-DMA2_Stream7 				= 70,
-USART6 						= 71,
-I2C3_EV 					= 72,
-I2C3_ER 					= 73,
-OTG_HS_EP1_OUT 				= 74,
-OTG_HS_EP1_IN 				= 75,
-OTG_HS_WKUP 				= 76,
-OTG_HS 						= 77,
-DCMI 						= 78,
-CRYP 						= 79,
-HASH_RNG 					= 80,
-FPU 						= 81,
+TIM2_IRQN 						= 28,
+TIM3_IRQN 						= 29,
+TIM4_IRQN						= 30,
+I2C1_EV_IRQN 					= 31,
+I2C1_ER_IRQN 					= 32,
+I2C2_EV_IRQN 					= 33,
+I2C2_ER_IRQN 					= 34,
+SPI1_IRQN 						= 35,
+SPI2_IRQN 						= 36,
+USART1_IRQN						= 37,
+USART2_IRQN					= 38,
+USART3_IRQN 						= 39,
+EXTI15_10_IRQN 					= 40,
+RTC_Alarm_IRQN 					= 41,
+OTG_FS_WKUP_IRQN 				= 42,
+TIM8_BRK_TIM12_IRQN 				= 43,
+TIM8_UP_TIM13_IRQN 				= 44,
+TIM8_TRG_COM_TIM14_IRQN 			= 45,
+TIM8_CC_IRQN 					= 46,
+DMA1_Stream7_IRQN 				= 47,
+FSMC_IRQN 						= 48,
+SDIO_IRQN 						= 49,
+TIM5_IRQN 						= 50,
+SPI3_IRQN 						= 51,
+UART4_IRQN 						= 52,
+UART5_IRQN						= 53,
+TIM6_DAC_IRQN 					= 54,
+TIM7_IRQN 						= 55,
+DMA2_Stream0_IRQN 				= 56,
+DMA2_Stream1_IRQN 				= 57,
+DMA2_Stream2_IRQN 				= 58,
+DMA2_Stream3_IRQN 				= 59,
+DMA2_Stream4_IRQN 				= 60,
+ETH_IRQN 						= 61,
+ETH_WKUP_IRQN 					= 62,
+CAN2_TX_IRQN 					= 63,
+CAN2_RX0_IRQN 					= 64,
+CAN2_RX1_IRQN 					= 65,
+CAN2_SCE_IRQN 					= 66,
+OTG_FS_IRQN 						= 67,
+DMA2_Stream5_IRQN 				= 68,
+DMA2_Stream6_IRQN 				= 69,
+DMA2_Stream7_IRQN 				= 70,
+USART6_IRQN 						= 71,
+I2C3_EV_IRQN 					= 72,
+I2C3_ER_IRQN 					= 73,
+OTG_HS_EP1_OUT_IRQN 				= 74,
+OTG_HS_EP1_IN_IRQN 				= 75,
+OTG_HS_WKUP_IRQN 				= 76,
+OTG_HS_IRQN						= 77,
+DCMI_IRQN 						= 78,
+CRYP_IRQN 						= 79,
+HASH_RNG_IRQN 					= 80,
+FPU_IRQN 						= 81,
 }IRQn_Type;
 
 
@@ -164,6 +167,8 @@ void NVIC_DisableIRQ(IRQn_Type IRQn);
 void NVIC_SetPendingIRQ(IRQn_Type IRQn);
 void NVIC_ClearPendingIRQ(IRQn_Type IRQn);
 uint32_t NVIC_GetActive(IRQn_Type IRQn);
+void NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority);
+uint32_t NVIC_GetPriority(IRQn_Type IRQn);
 
 /*------------- Software Interfaces Declarations   End ------------------ */
 

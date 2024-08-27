@@ -53,23 +53,88 @@ Discarded input sections
  .ARM.exidx     0x00000000       0x10 D:/Programs/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
  .ARM.attributes
                 0x00000000       0x20 D:/Programs/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
- .group         0x00000000        0xc ./Src/CortexM4_Core_NVIC.o
- .group         0x00000000        0xc ./Src/CortexM4_Core_NVIC.o
- .text          0x00000000        0x0 ./Src/CortexM4_Core_NVIC.o
- .data          0x00000000        0x0 ./Src/CortexM4_Core_NVIC.o
- .bss           0x00000000        0x0 ./Src/CortexM4_Core_NVIC.o
- .debug_info    0x00000000       0x46 ./Src/CortexM4_Core_NVIC.o
- .debug_abbrev  0x00000000       0x1d ./Src/CortexM4_Core_NVIC.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .text          0x00000000        0x0 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .data          0x00000000        0x0 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .bss           0x00000000        0x0 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .text.NVIC_EnableIRQ
+                0x00000000       0x34 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .text.NVIC_DisableIRQ
+                0x00000000       0x34 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .text.NVIC_SetPendingIRQ
+                0x00000000       0x34 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .text.NVIC_ClearPendingIRQ
+                0x00000000       0x34 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .text.NVIC_GetActive
+                0x00000000       0x38 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .text.NVIC_SetPriority
+                0x00000000       0x30 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .text.NVIC_GetPriority
+                0x00000000       0x2c ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .debug_info    0x00000000      0x502 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .debug_abbrev  0x00000000      0x12d ./Src/CortexM4/CortexM4_Core_NVIC.o
  .debug_aranges
-                0x00000000       0x18 ./Src/CortexM4_Core_NVIC.o
- .debug_macro   0x00000000       0x2a ./Src/CortexM4_Core_NVIC.o
- .debug_macro   0x00000000      0xaba ./Src/CortexM4_Core_NVIC.o
- .debug_macro   0x00000000       0x10 ./Src/CortexM4_Core_NVIC.o
- .debug_line    0x00000000       0x6a ./Src/CortexM4_Core_NVIC.o
- .debug_str     0x00000000     0x2ead ./Src/CortexM4_Core_NVIC.o
- .comment       0x00000000       0x44 ./Src/CortexM4_Core_NVIC.o
+                0x00000000       0x50 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .debug_rnglists
+                0x00000000       0x37 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .debug_macro   0x00000000       0x72 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .debug_macro   0x00000000      0xaba ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .debug_macro   0x00000000       0x22 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .debug_macro   0x00000000       0x8e ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .debug_macro   0x00000000       0x51 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .debug_macro   0x00000000      0x103 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .debug_macro   0x00000000       0x6a ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .debug_macro   0x00000000      0x1df ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .debug_macro   0x00000000       0x16 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .debug_line    0x00000000      0x523 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .debug_str     0x00000000     0x439d ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .comment       0x00000000       0x44 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .debug_frame   0x00000000      0x128 ./Src/CortexM4/CortexM4_Core_NVIC.o
  .ARM.attributes
-                0x00000000       0x34 ./Src/CortexM4_Core_NVIC.o
+                0x00000000       0x34 ./Src/CortexM4/CortexM4_Core_NVIC.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_SCB.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_SCB.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_SCB.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_SCB.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_SCB.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_SCB.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_SCB.o
+ .group         0x00000000        0xc ./Src/CortexM4/CortexM4_Core_SCB.o
+ .text          0x00000000        0x0 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .data          0x00000000        0x0 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .bss           0x00000000        0x0 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .text.SCB_SetPriorityGrouping
+                0x00000000       0x54 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .text.SCB_GetPriortyGrouping
+                0x00000000       0x34 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_info    0x00000000      0x1a8 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_abbrev  0x00000000       0xd1 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_aranges
+                0x00000000       0x28 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_rnglists
+                0x00000000       0x19 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_macro   0x00000000       0x72 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_macro   0x00000000      0xaba ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_macro   0x00000000       0x22 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_macro   0x00000000       0x8e ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_macro   0x00000000       0x51 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_macro   0x00000000      0x103 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_macro   0x00000000       0x6a ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_macro   0x00000000      0x1df ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_macro   0x00000000       0x40 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_line    0x00000000      0x472 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_str     0x00000000     0x3f33 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .comment       0x00000000       0x44 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .debug_frame   0x00000000       0x60 ./Src/CortexM4/CortexM4_Core_SCB.o
+ .ARM.attributes
+                0x00000000       0x34 ./Src/CortexM4/CortexM4_Core_SCB.o
  .group         0x00000000        0xc ./Src/main.o
  .text          0x00000000        0x0 ./Src/main.o
  .data          0x00000000        0x0 ./Src/main.o
@@ -517,7 +582,8 @@ Linker script and memory map
 LOAD D:/Programs/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crti.o
 LOAD D:/Programs/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 LOAD D:/Programs/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
-LOAD ./Src/CortexM4_Core_NVIC.o
+LOAD ./Src/CortexM4/CortexM4_Core_NVIC.o
+LOAD ./Src/CortexM4/CortexM4_Core_SCB.o
 LOAD ./Src/main.o
 LOAD ./Src/syscalls.o
 LOAD ./Src/sysmem.o

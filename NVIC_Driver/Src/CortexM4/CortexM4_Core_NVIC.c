@@ -7,7 +7,7 @@
  */
 
 
-#include "CortexM4_Core_NVIC.h"
+#include "CortexM4/CortexM4_Core_NVIC.h"
 /**
  *
  */
@@ -72,6 +72,37 @@ uint32_t NVIC_GetActive(IRQn_Type IRQn)
 		return 0;
 	}
 }
+
+
+/**
+ *
+ */
+void NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
+{
+	if((uint32_t)IRQn >= 0UL){
+		NVIC->IP[(uint32_t)IRQn] = (uint8_t)((priority << (8U - NVIC_PRI_BITS)) & (uint32_t)0x000000FF);
+	}
+	else{
+		/* Nothing */
+	}
+}
+
+/**
+ *
+ */
+uint32_t NVIC_GetPriority(IRQn_Type IRQn)
+{
+	if((uint32_t)IRQn >= 0UL){
+		return ((NVIC->IP[(uint32_t)IRQn] >> (8U - NVIC_PRI_BITS)));
+	}
+	else{
+		/* Nothing */
+	}
+}
+
+
+
+
 
 
 
