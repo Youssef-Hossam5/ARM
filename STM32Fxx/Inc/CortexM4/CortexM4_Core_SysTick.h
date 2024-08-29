@@ -1,8 +1,9 @@
-/*
- * CortexM4_Core_SysTick.h
- *
- *  Created on: Sep 17, 2023
- *      Author: user
+/**
+ ******************************************************************************
+ * @file           : CortexM4_Core_SysTick.h
+ * @author         : Youssef Hossam Saad
+ * @brief          :
+ ******************************************************************************
  */
 
 #ifndef CORTEXM4_CORTEXM4_CORE_SYSTICK_H_
@@ -26,7 +27,7 @@
 
 #define SysTick_LOAD_RELAOD_MASK		(0x00FFFFFFUL)
 
-#define SysTick_SingleInterval_Mode	0
+#define SysTick_SingleInterval_Mode		0
 #define SysTick_PeriodicInterval_Mode	1
 
 /* --------------------------- Macro Declarations End ------------------------------------------------ */

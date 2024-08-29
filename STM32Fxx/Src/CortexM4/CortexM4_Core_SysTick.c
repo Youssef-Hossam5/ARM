@@ -1,15 +1,16 @@
-/*
- * CortexM4_Core_SysTick.c
- *
- *  Created on: Sep 17, 2023
- *      Author: user
+/**
+ ******************************************************************************
+ * @file           : CortexM4_Core_SysTick.c
+ * @author         : Youssef Hossam Saad
+ * @brief          :
+ ******************************************************************************
  */
-
 #include "CortexM4/CortexM4_Core_SysTick.h"
 #include "HAL_Drivers/Common/STM32F4xx_HAL_Def.h"
 #include "Common/Common_Macros.h"
 static volatile ptrFunction SysTick_CallBack = NULL;
 
+/* Define if ISR will be called either once or periodic 	*/
 static volatile uint8_t SysTick_Mode = SysTick_SingleInterval_Mode;
 
 /**
@@ -19,7 +20,7 @@ uint8_t SysTick_Init(uint32_t SysTick_Ticks)
 {
 	uint8_t RetVal = 0;
 
-	if(SysTick_LOAD_RELAOD_MASK < SysTick_Ticks){
+	if(SysTick_Ticks > SysTick_LOAD_RELAOD_MASK){
 		RetVal = 1;
 	}
 	else{
@@ -30,9 +31,9 @@ uint8_t SysTick_Init(uint32_t SysTick_Ticks)
 		/* Reset SysTick counter value  */
 		SYSTICK->VAL = 0;
 		/* Select Clock */
-#if		(SYSTICK_CLOCK_SOURCE == SYSTICK_CLOCK_SOURCE_DEV_1)
+#if		(SYSTICK_CLOCK_SOURCE == SYSTICK_CLOCK_SOURCE_DIV_1)
 		SET_BIT(SYSTICK->CTRL, SysTick_CTRL_CLKSOURCE_MASK);
-#elif	(SYSTICK_CLOCK_SOURCE == SYSTICK_CLOCK_SOURCE_DEV_8)
+#elif	(SYSTICK_CLOCK_SOURCE == SYSTICK_CLOCK_SOURCE_DIV_8)
 		CLEAR_BIT(SYSTICK->CTRL, SysTick_CTRL_CLKSOURCE_MASK);
 #else
 #error "Invalid Clock Source"

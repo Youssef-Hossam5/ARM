@@ -1,10 +1,10 @@
-/*
- * CortexM4_Core_SysTick_Cfg.h
- *
- *  Created on: Sep 18, 2023
- *      Author: user
+/**
+ ******************************************************************************
+ * @file           : CortexM4_Core_SysTick_Cfg.h
+ * @author         : Youssef Hossam Saad
+ * @brief          : Configuring Systick clock source
+ ******************************************************************************
  */
-
 #ifndef CORTEXM4_CORTEXM4_CORE_SYSTICK_CFG_H_
 #define CORTEXM4_CORTEXM4_CORE_SYSTICK_CFG_H_
 
@@ -16,9 +16,9 @@
 
 /* --------------------------- Macro Declarations Start ---------------------------------------------- */
 
-#define SYSTICK_CLOCK_SOURCE_DEV_1		0U
-#define SYSTICK_CLOCK_SOURCE_DEV_8		1U
-#define SYSTICK_CLOCK_SOURCE			SYSTICK_CLOCK_SOURCE_DEV_8
+#define SYSTICK_CLOCK_SOURCE_DIV_1		0U
+#define SYSTICK_CLOCK_SOURCE_DIV_8		1U
+#define SYSTICK_CLOCK_SOURCE			SYSTICK_CLOCK_SOURCE_DIV_8
 
 /* --------------------------- Macro Declarations End ------------------------------------------------ */
 
