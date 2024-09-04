@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <ThresholdFilter level="INFO"/>
+    <Appenders>
+        <RollingFile name="DEBUGFILE" fileName="D:/Cufe/Courses/Embedded/04_Part 4 Automotive, Bootloader and ARM Cortex M4 Architecture/01 Introduction To ARM Cortex M4 (STM32F4)/03 Lectures/05 The Easiest Way to Write and Understand ARM-Based Device Drivers (Completed)/01_BluePill_GPIO/Project/.metadata/.ide.log" filePattern="D:/Cufe/Courses/Embedded/04_Part 4 Automotive, Bootloader and ARM Cortex M4 Architecture/01 Introduction To ARM Cortex M4 (STM32F4)/03 Lectures/05 The Easiest Way to Write and Understand ARM-Based Device Drivers (Completed)/01_BluePill_GPIO/Project/.metadata/.ide.log-%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss,SSS} [%p] %c{1}:%L - %m%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="50MB"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="ALL">
+            <AppenderRef ref="DEBUGFILE" />
+        </Root>
+    </Loggers>
+</Configuration>
