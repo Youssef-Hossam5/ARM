@@ -21,7 +21,7 @@ static void Bootloader_Send_ACK(uint8_t Replay_Len);
 static void Bootloader_Send_NACK(void);
 static void Bootloader_Send_Data_To_Host(uint8_t *Host_Buffer, uint32_t Data_Len);
 static uint8_t Host_Address_Verification(uint32_t Jump_Address);
-static uint8_t Perform_Flash_Erase(uint8_t Sector_Numebr, uint8_t Number_Of_Sectors);
+static uint8_t Perform_Flash_Erase(uint8_t Sector_Number, uint8_t Number_Of_Sectors);
 
 /* ----------------- Global Variables Definitions -----------------*/
 static uint8_t BL_Host_Buffer[BL_HOST_BUFFER_RX_LENGTH];
@@ -398,7 +398,7 @@ static void Bootloader_Read_Protection_Level(uint8_t *Host_Buffer){
 	}
 }
 
-static uint8_t Perform_Flash_Erase(uint8_t Sector_Numebr, uint8_t Number_Of_Sectors){
+static uint8_t Perform_Flash_Erase(uint8_t Sector_Number, uint8_t Number_Of_Sectors){
 	uint8_t Sector_Validity_Status = INVALID_SECTOR_NUMBER;
 	FLASH_EraseInitTypeDef pEraseInit;
 	uint8_t Remaining_Sectors = 0;
@@ -410,9 +410,9 @@ static uint8_t Perform_Flash_Erase(uint8_t Sector_Numebr, uint8_t Number_Of_Sect
 		Sector_Validity_Status = INVALID_SECTOR_NUMBER;
 	}
 	else{
-		if((Sector_Numebr <= (CBL_FLASH_MAX_SECTOR_NUMBER - 1)) || (CBL_FLASH_MASS_ERASE == Sector_Numebr)){
+		if((Sector_Number <= (CBL_FLASH_MAX_SECTOR_NUMBER - 1)) || (CBL_FLASH_MASS_ERASE == Sector_Number)){
 			/* Check if user needs Mass erase */
-			if(CBL_FLASH_MASS_ERASE == Sector_Numebr){
+			if(CBL_FLASH_MASS_ERASE == Sector_Number){
 				pEraseInit.TypeErase = FLASH_TYPEERASE_MASSERASE; /* Flash Mass erase activation */
 #if (BL_DEBUG_ENABLE == DEBUG_INFO_ENABLE)
 				BL_Print_Message("Flash Mass erase activation \r\n");
@@ -423,14 +423,14 @@ static uint8_t Perform_Flash_Erase(uint8_t Sector_Numebr, uint8_t Number_Of_Sect
 #if (BL_DEBUG_ENABLE == DEBUG_INFO_ENABLE)
 				BL_Print_Message("User needs Sector erase \r\n");
 #endif
-				Remaining_Sectors = CBL_FLASH_MAX_SECTOR_NUMBER - Sector_Numebr;
+				Remaining_Sectors = CBL_FLASH_MAX_SECTOR_NUMBER - Sector_Number;
 				if(Number_Of_Sectors > Remaining_Sectors){
 					Number_Of_Sectors = Remaining_Sectors;
 				}
 				else { /* Nothing */ }
 				
 				pEraseInit.TypeErase = FLASH_TYPEERASE_SECTORS; /* Sectors erase only */
-				pEraseInit.Sector = Sector_Numebr;        /* Initial FLASH sector to erase when Mass erase is disabled */
+				pEraseInit.Sector = Sector_Number;        /* Initial FLASH sector to erase when Mass erase is disabled */
 				pEraseInit.NbSectors = Number_Of_Sectors; /* Number of sectors to be erased. */
 			}
 			
