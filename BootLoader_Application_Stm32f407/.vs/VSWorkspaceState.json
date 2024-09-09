@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BootloaderProject",
+    "\\BootloaderProject\\Bootloader",
+    "\\BootloaderProject\\Core",
+    "\\BootloaderProject\\Drivers\\CMSIS",
+    "\\BootloaderProject\\Drivers\\CMSIS\\Core",
+    "\\BootloaderProject\\Drivers\\CMSIS\\Core\\Include"
+  ],
+  "SelectedNode": "\\BootloaderProject\\Drivers",
+  "PreviewInSolutionExplorer": false
+}

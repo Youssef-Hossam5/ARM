@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Bootloader",
+    "\\Core",
+    "\\Core\\Src",
+    "\\Drivers",
+    "\\Drivers\\STM32F4xx_HAL_Driver",
+    "\\Drivers\\STM32F4xx_HAL_Driver\\Inc"
+  ],
+  "SelectedNode": "\\Core\\Src\\main.c",
+  "PreviewInSolutionExplorer": false
+}
